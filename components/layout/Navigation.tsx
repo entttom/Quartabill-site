@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Github, Download } from 'lucide-react'
+import Image from 'next/image'
 import Button from '@/components/ui/Button'
 
 const Navigation = () => {
@@ -49,10 +50,17 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
-            className="flex items-center"
+            className="flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="text-2xl font-bold text-primary-600">
+            <Image
+              src="/logo.png"
+              alt="QuartaBill Logo"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10"
+            />
+            <div className="text-xl sm:text-2xl font-bold text-primary-600">
               QuartaBill
             </div>
           </motion.div>

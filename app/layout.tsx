@@ -5,16 +5,18 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'QuartaBill - Professionelle Quartalsabrechnungen für Arbeitsmediziner',
-  description: 'Desktop-App für Arbeitsmediziner zur effizienten Quartalsabrechnung. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync. Kostenlos für Windows, macOS und Linux.',
+  title: 'QuartaBill - Professionelle Quartalsabrechnungen für pauschale Honorare',
+  description: 'Desktop-App für pauschale Quartalsabrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync. Kostenlos für Windows, macOS und Linux.',
   keywords: [
     'QuartaBill',
     'Quartalsabrechnung',
-    'Arbeitsmediziner',
+    'Pauschalhonorare',
     'Desktop-App', 
     'PDF-Rechnung',
     'Kundenverwaltung',
-    'Medizin-Software',
+    'Rechnungssoftware',
+    'Arbeitsmediziner',
+    'Beratungsunternehmen',
     'Dr. Thomas Entner'
   ],
   authors: [{ name: 'Dr. Thomas Entner', url: 'https://github.com/entttom' }],
@@ -34,8 +36,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'QuartaBill - Professionelle Quartalsabrechnungen für Arbeitsmediziner',
-    description: 'Desktop-App für Arbeitsmediziner zur effizienten Quartalsabrechnung. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync.',
+    title: 'QuartaBill - Professionelle Quartalsabrechnungen für pauschale Honorare',
+    description: 'Desktop-App für pauschale Quartalsabrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync.',
     url: 'https://quartabill.com',
     siteName: 'QuartaBill',
     images: [
@@ -51,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'QuartaBill - Professionelle Quartalsabrechnungen für Arbeitsmediziner',
-    description: 'Desktop-App für Arbeitsmediziner zur effizienten Quartalsabrechnung.',
+    title: 'QuartaBill - Professionelle Quartalsabrechnungen für pauschale Honorare',
+    description: 'Desktop-App für pauschale Quartalsabrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister.',
     images: ['/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png'],
   },
   robots: {

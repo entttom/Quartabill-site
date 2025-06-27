@@ -12,97 +12,97 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-secondary-50 via-white to-primary-50">
-      {/* Background Mesh Gradient */}
-      <div className="absolute inset-0 mesh-gradient opacity-30" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Professional Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.08)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.05)_0%,transparent_50%)] opacity-70" />
       
-      {/* Floating Elements */}
-      <motion.div
-        className="absolute top-20 left-10 w-32 h-32 bg-primary-200/30 rounded-full blur-xl"
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
+      {/* Subtle Grid Pattern */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f1f5f9' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}
       />
+      
+      {/* Floating Elements - More Subtle */}
       <motion.div
-        className="absolute bottom-20 right-10 w-40 h-40 bg-accent-200/30 rounded-full blur-xl"
-        animate={{ y: [0, 20, 0] }}
+        className="absolute top-32 left-8 w-24 h-24 bg-primary-400/10 rounded-full blur-2xl"
+        animate={{ y: [0, -15, 0], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity }}
       />
+      <motion.div
+        className="absolute bottom-32 right-8 w-32 h-32 bg-accent-400/10 rounded-full blur-2xl"
+        animate={{ y: [0, 15, 0], opacity: [0.2, 0.4, 0.2] }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
           {/* Left Side - Content */}
           <motion.div
-            className="text-center lg:text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Badge */}
-            <motion.div
-              className="inline-flex items-center px-4 py-2 mb-6 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"
+
+
+            {/* Headline */}
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              🏥 Speziell für Arbeitsmediziner
-            </motion.div>
-
-            {/* Headline */}
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
               Professionelle{' '}
-              <span className="text-gradient">Quartalsabrechnungen</span>{' '}
-              für Arbeitsmediziner
+              <span className="text-gradient block sm:inline">Quartalsabrechnungen</span>{' '}
+              <span className="block sm:inline">leicht gemacht</span>
             </motion.h1>
 
             {/* Subline */}
             <motion.p
-              className="text-lg md:text-xl text-secondary-600 mb-8 max-w-2xl"
+              className="text-base sm:text-lg md:text-xl text-secondary-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.3 }}
             >
-              Vereinfachen Sie Ihre Abrechnung mit QuartaBill - der Desktop-App, 
-              die speziell für Arbeitsmediziner entwickelt wurde. Automatische PDF-Generierung, 
-              E-Mail-Integration und Cloud-Sync inklusive.
+              Vereinfachen Sie Ihre Quartalsabrechnung mit QuartaBill - der Desktop-App 
+              für pauschale Abrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und 
+              andere Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync inklusive.
             </motion.p>
 
             {/* Features Preview */}
             <motion.div
-              className="grid grid-cols-2 gap-4 mb-8 text-sm text-secondary-600"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 text-sm text-secondary-600 max-w-lg mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.4 }}
             >
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent-500 rounded-full" />
-                Multi-Platform Support
+              <div className="flex items-center gap-2 justify-center sm:justify-start">
+                <div className="w-2 h-2 bg-accent-500 rounded-full flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Multi-Platform Support</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent-500 rounded-full" />
-                Cloud-Sync kompatibel
+              <div className="flex items-center gap-2 justify-center sm:justify-start">
+                <div className="w-2 h-2 bg-accent-500 rounded-full flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Cloud-Sync kompatibel</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent-500 rounded-full" />
-                Vollständig signiert
+              <div className="flex items-center gap-2 justify-center sm:justify-start">
+                <div className="w-2 h-2 bg-accent-500 rounded-full flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Vollständig signiert</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent-500 rounded-full" />
-                Kostenlos & Open Source
+              <div className="flex items-center gap-2 justify-center sm:justify-start">
+                <div className="w-2 h-2 bg-accent-500 rounded-full flex-shrink-0" />
+                <span className="text-xs sm:text-sm">Kostenlos & Open Source</span>
               </div>
             </motion.div>
 
             {/* CTAs */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.5 }}
             >
               <Button
                 variant="primary"
@@ -139,17 +139,17 @@ const Hero = () => {
 
           {/* Right Side - Screenshot */}
           <motion.div
-            className="relative"
+            className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Mockup Frame */}
-            <div className="relative max-w-2xl mx-auto">
+            <div className="relative max-w-sm sm:max-w-md lg:max-w-2xl mx-auto">
               {/* Floating Screenshot */}
               <motion.div
                 className="screenshot-container"
-                animate={{ y: [0, -10, 0] }}
+                animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 6, repeat: Infinity }}
               >
                 <Image
@@ -157,14 +157,14 @@ const Hero = () => {
                   alt="QuartaBill Hauptbildschirm"
                   width={800}
                   height={600}
-                  className="w-full h-auto rounded-xl shadow-2xl"
+                  className="w-full h-auto rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl"
                   priority
                 />
               </motion.div>
 
-              {/* Floating Elements around Screenshot */}
+              {/* Floating Elements around Screenshot - Hidden on mobile */}
               <motion.div
-                className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500 rounded-lg opacity-80"
+                className="hidden sm:block absolute -top-3 sm:-top-4 -left-3 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 bg-primary-500 rounded-lg opacity-80"
                 animate={{ 
                   rotate: [0, 360],
                   scale: [1, 1.1, 1] 
@@ -177,7 +177,7 @@ const Hero = () => {
               />
               
               <motion.div
-                className="absolute -bottom-4 -right-4 w-6 h-6 bg-accent-500 rounded-full opacity-80"
+                className="hidden sm:block absolute -bottom-3 sm:-bottom-4 -right-3 sm:-right-4 w-5 h-5 sm:w-6 sm:h-6 bg-accent-500 rounded-full opacity-80"
                 animate={{ 
                   scale: [1, 1.2, 1],
                   opacity: [0.8, 1, 0.8]

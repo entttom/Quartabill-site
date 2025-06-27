@@ -26,9 +26,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     
     const variants = {
       primary: 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:ring-primary-500',
-      secondary: 'bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-secondary-900 focus:ring-white/50',
+      secondary: 'bg-white/30 backdrop-blur-md border border-white/50 hover:bg-white/40 text-secondary-700 hover:text-secondary-900 shadow-lg focus:ring-primary-500',
       accent: 'bg-accent-500 hover:bg-accent-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:ring-accent-500',
-      glass: 'bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 text-white focus:ring-white/20'
+      glass: 'bg-white/20 backdrop-blur-md border border-white/40 hover:bg-white/30 text-secondary-700 hover:text-secondary-900 shadow-lg focus:ring-primary-500'
     }
     
     const sizes = {

@@ -26,7 +26,6 @@ const Footer = () => {
     {
       category: 'Rechtliches',
       items: [
-        { name: 'MIT Lizenz', href: 'https://github.com/entttom/QuartaBill/blob/main/LICENSE', external: true },
         { name: 'Changelog', href: 'https://github.com/entttom/QuartaBill/blob/main/CHANGELOG.md', external: true }
       ]
     }
@@ -62,8 +61,8 @@ const Footer = () => {
                   QuartaBill
                 </div>
                 <p className="text-secondary-300 mb-6 leading-relaxed">
-                  Professionelle Quartalsabrechnungen für Arbeitsmediziner. 
-                  Entwickelt von einem Arzt für Ärzte.
+                              Professionelle Quartalsabrechnungen für pauschale Quartalshonorare.
+            Entwickelt für Dienstleister mit regelmäßigen Abrechnungen.
                 </p>
                 
                 {/* Tech Stack */}
