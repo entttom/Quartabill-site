@@ -1,0 +1,443 @@
+========================================================================
+📋 WEBSITE-PLAN FÜR QUARTABILL - ULTRAMODERNE LANDINGPAGE
+========================================================================
+
+PROJEKT: QuartaBill - Professionelle Quartalsabrechnungen für Arbeitsmediziner
+ERSTELLT: 2025-01-27
+SPRACHEN: Deutsch (Primär) & Englisch
+TECH-STACK: Next.js 14, React, TypeScript, Tailwind CSS, Framer Motion
+
+========================================================================
+🎯 PROJEKTÜBERSICHT
+========================================================================
+
+QuartaBill ist eine professionelle Desktop-Anwendung (Electron) für Arbeitsmediziner zur effizienten Quartalsabrechnung. Die App bietet:
+
+✅ Kundenverwaltung mit flexiblen Leistungspositionen
+✅ Automatische PDF-Rechnungserstellung 
+✅ E-Mail-Integration mit EML-Generierung
+✅ Multi-Platform Support (Windows, macOS, Linux)
+✅ Cloud-Sync kompatibel (Nextcloud, iCloud, Dropbox)
+✅ Backup & Restore Funktionalität
+✅ Auto-Update System
+✅ Vollständig signiert & notarisiert (macOS)
+
+AKTUELLE VERSION: v1.6.2
+ENTWICKLER: Dr. Thomas Entner
+
+========================================================================
+🌐 WEBSITE-ARCHITEKTUR (NEXT.JS 14 APP ROUTER)
+========================================================================
+
+PROJECT STRUCTURE:
+```
+quartabill-website/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx                    # Homepage (DE)
+│   ├── en/
+│   │   ├── layout.tsx              # English Layout
+│   │   └── page.tsx                # Homepage (EN)
+│   ├── api/
+│   │   └── contact/route.ts        # Contact Form API
+│   └── components/
+│       ├── ui/                     # Shadcn/ui components
+│       ├── sections/               # Page sections
+│       ├── layout/                 # Layout components
+│       └── shared/                 # Shared components
+├── public/
+│   ├── screenshots/
+│   │   ├── de/                     # Deutsche Screenshots
+│   │   └── en/                     # English Screenshots
+│   ├── icons/
+│   ├── logo/
+│   └── downloads/                  # Release files
+├── lib/
+│   ├── i18n.ts                     # Internationalization
+│   ├── utils.ts                    # Utilities
+│   └── constants.ts                # Constants
+└── content/
+    ├── de/                         # German content
+    └── en/                         # English content
+```
+
+========================================================================
+📱 HOMEPAGE DESIGN (MODERN & PROFESSIONAL)
+========================================================================
+
+=== HERO SECTION ===
+LAYOUT: Split-Screen Hero mit Animation
+CONTENT:
+- LINKS: Headline + Subline + CTAs + Features-Preview
+- RECHTS: Hero-Screenshot mit Mockup-Frame + Floating Elements
+
+HEADLINE (DE): "Professionelle Quartalsabrechnungen für Arbeitsmediziner"
+SUBLINE (DE): "Vereinfachen Sie Ihre Abrechnung mit QuartaBill - der Desktop-App, die speziell für Arbeitsmediziner entwickelt wurde. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync inklusive."
+
+HEADLINE (EN): "Professional Quarterly Billing for Occupational Physicians"
+SUBLINE (EN): "Streamline your billing process with QuartaBill - the desktop app designed specifically for occupational physicians. Automatic PDF generation, email integration, and cloud sync included."
+
+CTAs:
+- Primär: "Kostenlos Download" / "Free Download"
+- Sekundär: "Screenshots ansehen" / "View Screenshots"
+- Tertiär: "GitHub Repository"
+
+HERO-SCREENSHOT: QuartaBill-Screenshot-2025-06-27-1-[de/en].png
+
+=== FEATURES SECTION ===
+LAYOUT: Grid-Layout mit Feature-Cards (3x2)
+DESIGN: Glassmorphism Cards mit Icons, Screenshots und Beschreibungen
+
+FEATURES:
+1. 🏢 KUNDENVERWALTUNG / CUSTOMER MANAGEMENT
+   Screenshot: QuartaBill-Screenshot-2025-06-27-2-[de/en].png
+   
+2. 📊 RECHNUNGSERSTELLUNG / INVOICE GENERATION  
+   Screenshot: QuartaBill-Screenshot-2025-06-27-3-[de/en].png
+   
+3. 📋 RECHNUNGSHISTORIE / INVOICE HISTORY
+   Screenshot: QuartaBill-Screenshot-2025-06-27-4-[de/en].png
+   
+4. ⚙️ EINSTELLUNGEN / SETTINGS
+   Screenshot: QuartaBill-Screenshot-2025-06-27-5-[de/en].png
+   
+5. 💾 BACKUP & RESTORE / BACKUP & RESTORE
+   Screenshot: QuartaBill-Screenshot-2025-06-27-6-[de/en].png
+   
+6. 📄 PDF-AUSGABE / PDF OUTPUT
+   Screenshot: Rechnung_Beispiel.png (nur DE)
+
+=== SCREENSHOTS GALLERY ===
+LAYOUT: Interactive Screenshot Gallery mit Lightbox
+DESIGN: Mosaic Grid mit Hover-Effects
+CONTENT: Alle 6 Screenshots + Example Invoice als Modal-Gallery
+
+=== TECH SPECS SECTION ===
+LAYOUT: Feature-Comparison Table
+CONTENT:
+- ✅ Multi-Platform (Windows, macOS, Linux)
+- ✅ Cloud-Sync kompatibel  
+- ✅ Automatische Updates
+- ✅ Vollständig signiert & notarisiert
+- ✅ Lokale Datenspeicherung
+- ✅ Mehrsprachig (DE/EN)
+- ✅ PDF & EML Export
+- ✅ Backup & Restore
+
+=== DOWNLOAD SECTION ===
+LAYOUT: Platform Cards mit Download-Buttons
+PLATFORMS:
+- Windows: QuartaBill Setup 1.6.2.exe + Portable
+- macOS: QuartaBill-1.6.2.dmg (Intel) + arm64 (Apple Silicon)
+- Linux: AppImage + .deb + .rpm
+
+=== DEVELOPER SECTION ===
+LAYOUT: About Card mit Developer Info
+CONTENT:
+- 👨‍⚕️ Entwickelt von Dr. Thomas Entner
+- 🏥 Speziell für Arbeitsmediziner
+- 🔬 Basierend auf realer Praxiserfahrung
+- 📧 Kontakt: tom@entner.org
+
+=== FOOTER ===
+CONTENT:
+- Links: GitHub, Releases, Documentation
+- Copyright: © 2024 Dr. Thomas Entner
+- License: MIT License
+
+========================================================================
+🎨 DESIGN SYSTEM & STYLING
+========================================================================
+
+=== COLOR PALETTE ===
+PRIMARY: #2563eb (Blue-600) - Medizinisch & Vertrauensvoll
+SECONDARY: #64748b (Slate-500) - Professional
+ACCENT: #10b981 (Emerald-500) - Success/Download CTAs
+NEUTRAL: #f8fafc (Slate-50) - Background
+DARK: #0f172a (Slate-900) - Text
+
+=== TYPOGRAPHY ===
+HEADLINE: Inter Bold 3rem/2.5rem responsive
+SUBLINE: Inter Medium 1.25rem/1.5rem
+BODY: Inter Regular 1rem/1.5rem
+CODE: JetBrains Mono 0.875rem
+
+=== COMPONENTS ===
+- Buttons: Rounded corners, shadows, hover-effects
+- Cards: Glassmorphism with backdrop-blur
+- Screenshots: Rounded corners, shadows, zoom-on-hover
+- Navigation: Sticky header mit smooth-scroll
+- Mobile: Hamburger menu, responsive grid
+
+=== ANIMATIONS (FRAMER MOTION) ===
+- Hero: Staggered text reveal + screenshot slide-in
+- Features: Scroll-triggered reveal animations
+- Screenshots: Parallax scroll effects
+- CTAs: Micro-interactions on hover
+- Page transitions: Smooth fade-in/out
+
+========================================================================
+📁 CONTENT STRUCTURE (MARKDOWN/MDX)
+========================================================================
+
+=== DEUTSCHE INHALTE (content/de/) ===
+
+features.md:
+```
+- title: "Kundenverwaltung"
+  description: "Umfassende Verwaltung von Kundendaten mit flexiblen Leistungspositionen, Drag-and-Drop Sortierung und deutschen Steuersätzen."
+  icon: "👥"
+  
+- title: "Rechnungserstellung" 
+  description: "Batch-Generierung aller Kunden eines Quartals mit anpassbaren Rechnungsnummern und automatischer Steuerberechnung."
+  icon: "📊"
+```
+
+downloads.md:
+```
+- platform: "Windows"
+  files: 
+    - name: "QuartaBill Setup 1.6.2.exe"
+      size: "120 MB"
+      type: "Installer"
+    - name: "QuartaBill 1.6.2.exe"  
+      size: "115 MB"
+      type: "Portable"
+```
+
+=== ENGLISCHE INHALTE (content/en/) ===
+Entsprechende Übersetzungen mit angepasstem Wording für internationale Zielgruppe.
+
+========================================================================
+🛠️ TECHNISCHE IMPLEMENTIERUNG
+========================================================================
+
+=== DEPENDENCIES ===
+```json
+{
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0", 
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "framer-motion": "^10.0.0",
+    "next-intl": "^3.0.0",
+    "lucide-react": "^0.300.0",
+    "@radix-ui/react-*": "^1.0.0",
+    "gray-matter": "^4.0.0",
+    "marked": "^5.0.0"
+  }
+}
+```
+
+=== KEY FEATURES ===
+✅ Server-Side Rendering (SSR)
+✅ Static Site Generation (SSG) für Performance
+✅ Image Optimization (next/image)
+✅ SEO Optimization (Metadata API)
+✅ Progressive Web App (PWA) ready
+✅ TypeScript für Type Safety
+✅ Responsive Design (Mobile-First)
+✅ Accessibility (WCAG 2.1 AA)
+✅ Performance Optimization (100/100 Lighthouse)
+
+=== I18N SETUP ===
+```typescript
+// lib/i18n.ts
+export const locales = ['de', 'en'] as const;
+export const defaultLocale = 'de' as const;
+
+// Navigation between locales
+// /de/ (German, default)  
+// /en/ (English)
+```
+
+=== SCREENSHOT INTEGRATION ===
+```typescript
+// lib/screenshots.ts
+export const screenshots = {
+  de: [
+    {
+      id: 'main',
+      title: 'Hauptbildschirm & Navigation',
+      description: 'Übersichtliche Benutzeroberfläche...',
+      image: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png',
+      category: 'interface'
+    },
+    // ...weitere Screenshots
+  ],
+  en: [
+    // Englische Versionen
+  ]
+};
+```
+
+========================================================================
+📋 UMSETZUNGSSCHRITTE FÜR CURSOR
+========================================================================
+
+=== PHASE 1: PROJECT SETUP ===
+```bash
+# 1. Create Next.js project
+npx create-next-app@latest quartabill-website --typescript --tailwind --app
+
+# 2. Install dependencies  
+npm install framer-motion next-intl lucide-react @radix-ui/react-dialog @radix-ui/react-navigation-menu
+
+# 3. Setup folder structure
+mkdir -p app/{en,api/contact} content/{de,en} public/{screenshots/{de,en},icons,downloads}
+```
+
+=== PHASE 2: LAYOUT & ROUTING ===
+1. Erstelle app/layout.tsx (Root Layout)
+2. Erstelle app/page.tsx (Deutsche Homepage)  
+3. Erstelle app/en/layout.tsx + page.tsx (English)
+4. Setup Internationalization (next-intl)
+5. Erstelle Navigation Components
+
+=== PHASE 3: UI COMPONENTS ===
+1. Design System Setup (Tailwind Config)
+2. UI Components (Button, Card, Modal, etc.)
+3. Layout Components (Header, Footer, Navigation)
+4. Section Components (Hero, Features, Gallery, etc.)
+
+=== PHASE 4: CONTENT INTEGRATION ===
+1. Screenshot Assets kopieren nach public/screenshots/
+2. Content Files erstellen (Markdown/JSON)
+3. Screenshot Gallery Component
+4. Download Section mit Platform Detection
+5. Contact Form mit API Route
+
+=== PHASE 5: ANIMATIONS & POLISH ===
+1. Framer Motion Animations
+2. Scroll-triggered Reveals  
+3. Micro-interactions
+4. Performance Optimization
+5. SEO & Metadata
+
+=== PHASE 6: DEPLOYMENT ===
+1. Build & Test
+2. Vercel Deployment Setup
+3. Domain Configuration
+4. Performance Audit
+5. Launch 🚀
+
+========================================================================
+📊 SEO & MARKETING OPTIMIERUNG
+========================================================================
+
+=== META TAGS (DEUTSCH) ===
+```typescript
+title: "QuartaBill - Professionelle Quartalsabrechnungen für Arbeitsmediziner"
+description: "Desktop-App für Arbeitsmediziner zur effizienten Quartalsabrechnung. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync. Kostenlos für Windows, macOS und Linux."
+keywords: "Quartalsabrechnung, Arbeitsmediziner, Desktop-App, PDF-Rechnung, Kundenverwaltung, Medizin-Software"
+```
+
+=== STRUCTURED DATA ===
+- Software Application Schema
+- Organization Schema (Dr. Thomas Entner)
+- Download Schema für Software Releases
+- FAQ Schema für häufige Fragen
+
+=== PERFORMANCE TARGETS ===
+- Lighthouse Score: 100/100 (Performance, Accessibility, Best Practices, SEO)
+- Core Web Vitals: Alle Green
+- Image Optimization: WebP/AVIF mit Fallbacks
+- Bundle Size: < 500KB initial load
+
+========================================================================
+🎯 ZIELGRUPPE & MESSAGING
+========================================================================
+
+=== PRIMÄRE ZIELGRUPPE ===
+- 👨‍⚕️ Arbeitsmediziner (DACH-Region)
+- 🏥 Betriebsärzte mit eigener Praxis
+- 📊 Kleine bis mittlere Arztpraxen
+- 💼 Selbstständige Mediziner
+
+=== KEY MESSAGES ===
+1. EFFIZIENZ: "Quartalsabrechnung in Minuten statt Stunden"
+2. SICHERHEIT: "Lokale Datenspeicherung, vollständig unter Ihrer Kontrolle"
+3. PROFESSIONALITÄT: "Von einem Arzt für Ärzte entwickelt"
+4. KOMPATIBILITÄT: "Funktioniert mit Ihrer bestehenden IT-Infrastruktur"
+
+=== CALL-TO-ACTIONS ===
+- Primär: "Jetzt kostenlos downloaden"
+- Sekundär: "Screenshots ansehen"  
+- Tertiär: "Auf GitHub anschauen"
+
+========================================================================
+📞 KONTAKT & SUPPORT
+========================================================================
+
+=== KONTAKT INFORMATIONEN ===
+Entwickler: Dr. Thomas Entner
+E-Mail: tom@entner.org
+GitHub: https://github.com/entttom/QuartaBill
+Repository: https://github.com/entttom/QuartaBill
+
+=== SUPPORT KANÄLE ===
+- GitHub Issues für Bug Reports
+- GitHub Discussions für Feature Requests
+- E-Mail für allgemeine Anfragen
+- Changelog für Release Notes
+
+========================================================================
+🚀 LAUNCH CHECKLIST
+========================================================================
+
+PRE-LAUNCH:
+☐ Alle Screenshots optimiert und eingebunden
+☐ Deutsche und englische Inhalte vollständig
+☐ Download-Links funktionsfähig
+☐ Kontaktformular getestet
+☐ Mobile Responsiveness verifiziert
+☐ Performance optimiert (Lighthouse 100/100)
+☐ SEO Meta-Tags implementiert
+☐ Analytics Setup (Google Analytics/Plausible)
+
+POST-LAUNCH:
+☐ Social Media Announcements
+☐ GitHub Repository README Update mit Website-Link
+☐ Medical Community Outreach
+☐ Performance Monitoring Setup
+☐ User Feedback Collection
+
+========================================================================
+💡 ERWEITERTE FEATURES (OPTIONAL)
+========================================================================
+
+=== PHASE 2 FEATURES ===
+- 📝 Blog/News Section für Updates
+- 🎥 Video-Tutorials und Demos
+- 📚 Ausführliche Dokumentation
+- 🌟 User Testimonials/Case Studies
+- 📈 Usage Analytics Dashboard (öffentlich)
+- 🔔 Newsletter Signup
+- 🌙 Dark Mode Toggle
+- 🔍 Search Functionality
+
+=== INTEGRATION MÖGLICHKEITEN ===
+- GitHub Releases API für automatische Downloads
+- GitHub Issues als Support-System
+- Automated Screenshot Updates von Repository
+- Release Notes von CHANGELOG.md
+
+========================================================================
+END OF WEBSITE PLAN
+========================================================================
+
+ZUSAMMENFASSUNG:
+Diese ultramoderne Website wird QuartaBill als professionelle Lösung für Arbeitsmediziner präsentieren. Der Fokus liegt auf klarem Design, optimaler Performance und multilingualem Support. Die Integration der vorhandenen Screenshots und die technische Exzellenz werden potenzielle Nutzer überzeugen.
+
+NÄCHSTE SCHRITTE:
+1. Project Setup mit Next.js 14
+2. Design System Implementation  
+3. Content Integration mit i18n
+4. Screenshot Gallery Development
+5. Performance Optimization
+6. Launch auf Vercel/Custom Domain
+
+Estimated Development Time: 2-3 Wochen für vollständige Implementierung
+Budget Consideration: ~€2,000-4,000 für professionelle Umsetzung 

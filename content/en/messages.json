@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "headline": "Professional Quarterly Billing for Occupational Physicians",
+    "subline": "Streamline your billing process with QuartaBill - the desktop app designed specifically for occupational physicians. Automatic PDF generation, email integration, and cloud sync included.",
+    "cta_primary": "Free Download",
+    "cta_secondary": "View Screenshots",
+    "cta_tertiary": "GitHub Repository"
+  },
+  "nav": {
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "download": "Download",
+    "github": "GitHub"
+  },
+  "features": {
+    "headline": "All Features at a Glance",
+    "subline": "QuartaBill provides everything you need for professional quarterly billing.",
+    "customer_management": {
+      "title": "Customer Management",
+      "description": "Comprehensive customer data management with flexible service positions, drag-and-drop sorting, and German tax rates."
+    },
+    "invoice_generation": {
+      "title": "Invoice Generation",
+      "description": "Batch generation of all customers for a quarter with customizable invoice numbers and automatic tax calculation."
+    },
+    "invoice_history": {
+      "title": "Invoice History",
+      "description": "Clear history of all created invoices with intelligent pagination and search functionality."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Complete configuration of company data, paths, logos, and personalized email templates."
+    },
+    "backup": {
+      "title": "Backup & Restore",
+      "description": "Automatic backups with restore functionality for maximum data security."
+    },
+    "pdf_output": {
+      "title": "PDF Output",
+      "description": "Professional PDF invoices with modern design, logo integration, and German formatting."
+    }
+  },
+  "tech_specs": {
+    "headline": "Technical Highlights",
+    "multi_platform": "Multi-Platform (Windows, macOS, Linux)",
+    "cloud_sync": "Cloud-Sync compatible",
+    "auto_updates": "Automatic Updates",
+    "signed": "Fully signed & notarized",
+    "local_storage": "Local data storage",
+    "multilingual": "Multilingual (DE/EN)",
+    "export": "PDF & EML Export",
+    "backup_restore": "Backup & Restore"
+  },
+  "download": {
+    "headline": "Download for Free Now",
+    "subline": "Available for all major operating systems",
+    "version": "Current Version: v1.6.2",
+    "windows": "Windows",
+    "macos": "macOS",
+    "linux": "Linux",
+    "installer": "Installer",
+    "portable": "Portable",
+    "intel": "Intel",
+    "apple_silicon": "Apple Silicon"
+  },
+  "developer": {
+    "headline": "Developed by a Doctor for Doctors",
+    "description": "Dr. Thomas Entner developed QuartaBill based on his own practical experience as an occupational physician.",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2024 Dr. Thomas Entner",
+    "license": "MIT License",
+    "links": "Links",
+    "releases": "Releases",
+    "documentation": "Documentation"
+  }
+} 

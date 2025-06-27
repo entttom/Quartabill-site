@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "headline": "Professionelle Quartalsabrechnungen für Arbeitsmediziner",
+    "subline": "Vereinfachen Sie Ihre Abrechnung mit QuartaBill - der Desktop-App, die speziell für Arbeitsmediziner entwickelt wurde. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync inklusive.",
+    "cta_primary": "Kostenlos Download",
+    "cta_secondary": "Screenshots ansehen",
+    "cta_tertiary": "GitHub Repository"
+  },
+  "nav": {
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "download": "Download",
+    "github": "GitHub"
+  },
+  "features": {
+    "headline": "Alle Features im Überblick",
+    "subline": "QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen.",
+    "customer_management": {
+      "title": "Kundenverwaltung",
+      "description": "Umfassende Verwaltung von Kundendaten mit flexiblen Leistungspositionen, Drag-and-Drop Sortierung und deutschen Steuersätzen."
+    },
+    "invoice_generation": {
+      "title": "Rechnungserstellung",
+      "description": "Batch-Generierung aller Kunden eines Quartals mit anpassbaren Rechnungsnummern und automatischer Steuerberechnung."
+    },
+    "invoice_history": {
+      "title": "Rechnungshistorie",
+      "description": "Übersichtliche Historie aller erstellten Rechnungen mit intelligenter Pagination und Suchfunktion."
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "description": "Vollständige Konfiguration von Firmendaten, Pfaden, Logos und personalisierten E-Mail-Templates."
+    },
+    "backup": {
+      "title": "Backup & Restore",
+      "description": "Automatische Backups mit Wiederherstellungsfunktion für maximale Datensicherheit."
+    },
+    "pdf_output": {
+      "title": "PDF-Ausgabe",
+      "description": "Professionelle PDF-Rechnungen mit modernem Design, Logo-Integration und deutscher Formatierung."
+    }
+  },
+  "tech_specs": {
+    "headline": "Technische Highlights",
+    "multi_platform": "Multi-Platform (Windows, macOS, Linux)",
+    "cloud_sync": "Cloud-Sync kompatibel",
+    "auto_updates": "Automatische Updates",
+    "signed": "Vollständig signiert & notarisiert",
+    "local_storage": "Lokale Datenspeicherung",
+    "multilingual": "Mehrsprachig (DE/EN)",
+    "export": "PDF & EML Export",
+    "backup_restore": "Backup & Restore"
+  },
+  "download": {
+    "headline": "Jetzt kostenlos herunterladen",
+    "subline": "Verfügbar für alle gängigen Betriebssysteme",
+    "version": "Aktuelle Version: v1.6.2",
+    "windows": "Windows",
+    "macos": "macOS",
+    "linux": "Linux",
+    "installer": "Installer",
+    "portable": "Portable",
+    "intel": "Intel",
+    "apple_silicon": "Apple Silicon"
+  },
+  "developer": {
+    "headline": "Von einem Arzt für Ärzte entwickelt",
+    "description": "Dr. Thomas Entner hat QuartaBill basierend auf seiner eigenen Praxiserfahrung als Arbeitsmediziner entwickelt.",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "copyright": "© 2024 Dr. Thomas Entner",
+    "license": "MIT Lizenz",
+    "links": "Links",
+    "releases": "Releases",
+    "documentation": "Dokumentation"
+  }
+} 
