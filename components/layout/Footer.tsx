@@ -20,7 +20,9 @@ const Footer = () => {
       items: [
         { name: 'Dr. Thomas Entner', href: 'https://github.com/entttom', external: true },
         { name: 'Kontakt', href: 'mailto:tom@entner.org', external: true },
-        { name: 'QuartaBill App', href: 'https://github.com/entttom/QuartaBill', external: true }
+        { name: 'QuartaBill App', href: 'https://github.com/entttom/QuartaBill', external: true },
+        { name: 'Entner.org', href: 'https://Entner.org', external: true },
+        { name: 'Arbeitsmediziner Wien', href: 'https://arbeitsmediziner.Wien', external: true }
       ]
     },
     {
