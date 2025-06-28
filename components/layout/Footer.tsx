@@ -137,7 +137,7 @@ const Footer = () => {
               </motion.a>
               
               <div className="text-secondary-500 text-sm">
-                Version 1.6.2
+                Version 1.4.1
               </div>
             </div>
           </div>
