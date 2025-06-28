@@ -12,6 +12,7 @@ import {
   FileOutput 
 } from 'lucide-react'
 import ImageLightbox from '@/components/ui/ImageLightbox'
+import { trackLightboxOpen } from '@/lib/analytics'
 
 const Features = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -20,6 +21,9 @@ const Features = () => {
   const openLightbox = (src: string, alt: string, title: string) => {
     setLightboxImage({ src, alt, title })
     setLightboxOpen(true)
+    
+    // Analytics Event für Lightbox-Öffnung
+    trackLightboxOpen(title, 'features')
   }
 
   const features = [

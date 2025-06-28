@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Download, Monitor, Apple, Laptop, Shield, Zap, Globe, CheckCircle, Github } from 'lucide-react'
 import { getLatestRelease, formatFileSize, formatVersionForDisplay, type ReleaseInfo, type DownloadInfo } from '@/lib/github'
 import { useTranslations } from '@/lib/useTranslations'
+import { trackDownload, trackGitHubVisit } from '@/lib/analytics'
 
 const DownloadSection = () => {
   const { t } = useTranslations()
@@ -204,6 +205,7 @@ const DownloadSection = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-between w-full p-4 glass rounded-lg hover:bg-white/30 transition-all duration-200 group-hover/download:scale-105"
+                            onClick={() => trackDownload(download.filename, platform, download.type)}
                           >
                             <div className="flex-1">
                               <div className="flex items-center justify-between">
@@ -296,6 +298,7 @@ const DownloadSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-glass text-white hover:text-accent-300"
+              onClick={trackGitHubVisit}
             >
               <Github className="w-5 h-5 mr-2" />
               Auf GitHub ansehen

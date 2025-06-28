@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import MatomoTracking from '@/components/analytics/MatomoTracking'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -79,6 +80,8 @@ export default function RootLayout({
     <html lang="de">
       <body className={inter.className}>
         {children}
+        {/* DSGVO-konforme Analytics ohne Cookies */}
+        <MatomoTracking />
       </body>
     </html>
   )

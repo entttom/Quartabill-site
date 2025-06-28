@@ -7,6 +7,7 @@ import { ArrowDown, Download, Eye, Github } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import { useTranslations } from '@/lib/useTranslations'
 import ImageLightbox from '@/components/ui/ImageLightbox'
+import { trackLightboxOpen } from '@/lib/analytics'
 
 const Hero = () => {
   const { t } = useTranslations()
@@ -18,6 +19,9 @@ const Hero = () => {
 
   const openScreenshotLightbox = () => {
     setLightboxOpen(true)
+    
+    // Analytics Event für Hero-Screenshot Lightbox
+    trackLightboxOpen('QuartaBill Hauptbildschirm', 'hero')
   }
 
   return (
