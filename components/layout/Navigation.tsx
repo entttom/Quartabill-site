@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Github, Download } from 'lucide-react'
 import Image from 'next/image'
 import Button from '@/components/ui/Button'
+import { useTranslations } from '@/lib/useTranslations'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { locale, setLocale, t } = useTranslations()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +21,10 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { name: 'Features', href: '#features' },
-    { name: 'Screenshots', href: '#features' },
-    { name: 'Download', href: '#download' },
-    { name: 'GitHub', href: 'https://github.com/entttom/QuartaBill', external: true }
+    { name: t('nav.features', 'Features'), href: '#features' },
+    { name: t('nav.screenshots', 'Screenshots'), href: '#features' },
+    { name: t('nav.download', 'Download'), href: '#download' },
+    { name: t('nav.github', 'GitHub'), href: 'https://github.com/entttom/QuartaBill', external: true }
   ]
 
   const scrollToSection = (href: string) => {
@@ -79,6 +81,34 @@ const Navigation = () => {
               </motion.button>
             ))}
             
+            {/* Language Switcher */}
+            <div className="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg">
+              <motion.button
+                className={`text-sm font-medium px-2 py-1 rounded transition-colors ${
+                  locale === 'de' 
+                    ? 'text-primary-600 bg-primary-100' 
+                    : 'text-secondary-500 hover:text-secondary-700'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setLocale('de')}
+              >
+                DE
+              </motion.button>
+              <motion.button
+                className={`text-sm font-medium px-2 py-1 rounded transition-colors ${
+                  locale === 'en' 
+                    ? 'text-primary-600 bg-primary-100' 
+                    : 'text-secondary-500 hover:text-secondary-700'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setLocale('en')}
+              >
+                EN
+              </motion.button>
+            </div>
+            
             <Button
               variant="primary"
               size="sm"
@@ -86,7 +116,7 @@ const Navigation = () => {
               className="flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
-              Download
+              {t('nav.download', 'Download')}
             </Button>
           </div>
 
@@ -124,6 +154,41 @@ const Navigation = () => {
                   </motion.button>
                 ))}
                 
+                {/* Mobile Language Switcher */}
+                <div className="py-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm text-secondary-600 font-medium">
+                      {locale === 'de' ? 'Sprache:' : 'Language:'}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <motion.button
+                        className={`text-sm font-medium px-3 py-1 rounded transition-colors ${
+                          locale === 'de' 
+                            ? 'text-primary-600 bg-primary-100' 
+                            : 'text-secondary-500 hover:text-secondary-700 border border-secondary-200'
+                        }`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setLocale('de')}
+                      >
+                        Deutsch
+                      </motion.button>
+                      <motion.button
+                        className={`text-sm font-medium px-3 py-1 rounded transition-colors ${
+                          locale === 'en' 
+                            ? 'text-primary-600 bg-primary-100' 
+                            : 'text-secondary-500 hover:text-secondary-700 border border-secondary-200'
+                        }`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setLocale('en')}
+                      >
+                        English
+                      </motion.button>
+                    </div>
+                  </div>
+                </div>
+                
                 <Button
                   variant="primary"
                   size="sm"
@@ -131,7 +196,7 @@ const Navigation = () => {
                   className="flex items-center gap-2 w-fit"
                 >
                   <Download className="w-4 h-4" />
-                  Download
+                  {t('nav.download', 'Download')}
                 </Button>
               </div>
             </div>

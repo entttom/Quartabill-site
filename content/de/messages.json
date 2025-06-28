@@ -1,10 +1,24 @@
 {
   "hero": {
-    "headline": "Professionelle Quartalsabrechnungen für Arbeitsmediziner",
-    "subline": "Vereinfachen Sie Ihre Abrechnung mit QuartaBill - der Desktop-App, die speziell für Arbeitsmediziner entwickelt wurde. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync inklusive.",
+    "badge": "Für pauschale Quartalsabrechnungen",
+    "headline": {
+      "part1": "Professionelle",
+      "part2": "Quartalsabrechnungen",
+      "part3": "leicht gemacht"
+    },
+    "subline": "Vereinfachen Sie Ihre Quartalsabrechnung mit QuartaBill - der Desktop-App für pauschale Abrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und andere Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync inklusive.",
+    "features": {
+      "multi_platform": "Multi-Platform Support",
+      "cloud_sync": "Cloud-Sync kompatibel", 
+      "signed": "Vollständig signiert",
+      "open_source": "Kostenlos & Open Source"
+    },
     "cta_primary": "Kostenlos Download",
     "cta_secondary": "Screenshots ansehen",
-    "cta_tertiary": "GitHub Repository"
+    "cta_tertiary": "GitHub Repository",
+    "screenshot": {
+      "click_to_enlarge": "Screenshot vergrößern"
+    }
   },
   "nav": {
     "features": "Features",
@@ -14,7 +28,7 @@
   },
   "features": {
     "headline": "Alle Features im Überblick",
-    "subline": "QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen.",
+    "subline": "QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen. Entwickelt für Dienstleister mit pauschalen Quartalshonoraren.",
     "customer_management": {
       "title": "Kundenverwaltung",
       "description": "Umfassende Verwaltung von Kundendaten mit flexiblen Leistungspositionen, Drag-and-Drop Sortierung und deutschen Steuersätzen."
@@ -54,7 +68,9 @@
   "download": {
     "headline": "Jetzt kostenlos herunterladen",
     "subline": "Verfügbar für alle gängigen Betriebssysteme",
-    "version": "Aktuelle Version: v1.6.2",
+    "version": "Aktuelle Version: {version}",
+    "loading": "Lade aktuelle Version...",
+    "error": "Fehler beim Laden der Release-Informationen",
     "windows": "Windows",
     "macos": "macOS",
     "linux": "Linux",

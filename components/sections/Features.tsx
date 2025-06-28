@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { 
@@ -11,8 +11,17 @@ import {
   Database, 
   FileOutput 
 } from 'lucide-react'
+import ImageLightbox from '@/components/ui/ImageLightbox'
 
 const Features = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState({ src: '', alt: '', title: '' })
+
+  const openLightbox = (src: string, alt: string, title: string) => {
+    setLightboxImage({ src, alt, title })
+    setLightboxOpen(true)
+  }
+
   const features = [
     {
       id: 'customer_management',
@@ -160,7 +169,10 @@ const Features = () => {
                   </p>
 
                   {/* Screenshot Preview */}
-                  <div className="relative overflow-hidden rounded-lg bg-secondary-100 group-hover:shadow-lg transition-shadow">
+                  <div 
+                    className="relative overflow-hidden rounded-lg bg-secondary-100 group-hover:shadow-lg transition-shadow cursor-pointer"
+                    onClick={() => openLightbox(feature.screenshot, `${feature.title} Screenshot`, feature.title)}
+                  >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
@@ -213,6 +225,15 @@ const Features = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Lightbox */}
+      <ImageLightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        imageSrc={lightboxImage.src}
+        imageAlt={lightboxImage.alt}
+        title={lightboxImage.title}
+      />
     </section>
   )
 }

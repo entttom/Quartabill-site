@@ -1,10 +1,24 @@
 {
   "hero": {
-    "headline": "Professional Quarterly Billing for Occupational Physicians",
-    "subline": "Streamline your billing process with QuartaBill - the desktop app designed specifically for occupational physicians. Automatic PDF generation, email integration, and cloud sync included.",
+    "badge": "For quarterly flat-rate billing",
+    "headline": {
+      "part1": "Professional",
+      "part2": "Quarterly Billing",
+      "part3": "Made Easy"
+    },
+    "subline": "Streamline your quarterly billing with QuartaBill - the desktop app for flat-rate billing. Perfect for occupational physicians, consulting companies, and other service providers. Automatic PDF generation, email integration, and cloud sync included.",
+    "features": {
+      "multi_platform": "Multi-Platform Support",
+      "cloud_sync": "Cloud-Sync Compatible", 
+      "signed": "Fully Signed",
+      "open_source": "Free & Open Source"
+    },
     "cta_primary": "Free Download",
     "cta_secondary": "View Screenshots",
-    "cta_tertiary": "GitHub Repository"
+    "cta_tertiary": "GitHub Repository",
+    "screenshot": {
+      "click_to_enlarge": "Click to enlarge"
+    }
   },
   "nav": {
     "features": "Features",
@@ -14,7 +28,7 @@
   },
   "features": {
     "headline": "All Features at a Glance",
-    "subline": "QuartaBill provides everything you need for professional quarterly billing.",
+    "subline": "QuartaBill provides everything you need for professional quarterly billing. Designed for service providers with quarterly flat-rate fees.",
     "customer_management": {
       "title": "Customer Management",
       "description": "Comprehensive customer data management with flexible service positions, drag-and-drop sorting, and German tax rates."
@@ -54,7 +68,9 @@
   "download": {
     "headline": "Download for Free Now",
     "subline": "Available for all major operating systems",
-    "version": "Current Version: v1.6.2",
+    "version": "Current Version: {version}",
+    "loading": "Loading current version...",
+    "error": "Error loading release information",
     "windows": "Windows",
     "macos": "macOS",
     "linux": "Linux",
