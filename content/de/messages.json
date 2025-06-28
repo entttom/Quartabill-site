@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "Für pauschale Quartalsabrechnungen",
+    "badge": "Quartalsweise Abrechnung automatisieren",
     "headline": {
-      "part1": "Professionelle",
+      "part1": "Pauschale",
       "part2": "Quartalsabrechnungen",
-      "part3": "leicht gemacht"
+      "part3": "automatisieren"
     },
-    "subline": "Vereinfachen Sie Ihre Quartalsabrechnung mit QuartaBill - der Desktop-App für pauschale Abrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und andere Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync inklusive.",
+    "subline": "Automatisieren Sie Ihre pauschale Quartalsabrechnung mit QuartaBill - der intelligenten Desktop-App für wiederkehrende Abrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister. Vollautomatische PDF-Generierung, E-Mail-Versand und Cloud-Sync inklusive.",
     "features": {
       "multi_platform": "Multi-Platform Support",
       "cloud_sync": "Cloud-Sync kompatibel", 
@@ -27,8 +27,8 @@
     "github": "GitHub"
   },
   "features": {
-    "headline": "Alle Features im Überblick",
-    "subline": "QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen. Entwickelt für Dienstleister mit pauschalen Quartalshonoraren.",
+    "headline": "Automatisierung im Detail",
+    "subline": "QuartaBill automatisiert jeden Schritt Ihrer Quartalsabrechnung - von der Kundenverwaltung bis zum PDF-Versand. Entwickelt für Dienstleister mit wiederkehrenden pauschalen Quartalshonoraren.",
     "customer_management": {
       "title": "Kundenverwaltung",
       "description": "Umfassende Verwaltung von Kundendaten mit flexiblen Leistungspositionen, Drag-and-Drop Sortierung und deutschen Steuersätzen."
@@ -66,8 +66,8 @@
     "backup_restore": "Backup & Restore"
   },
   "download": {
-    "headline": "Jetzt kostenlos herunterladen",
-    "subline": "Verfügbar für alle gängigen Betriebssysteme",
+    "headline": "Automatisierung sofort starten",
+    "subline": "Kostenlos für alle gängigen Betriebssysteme - Setup in unter 5 Minuten",
     "version": "Aktuelle Version: {version}",
     "loading": "Lade aktuelle Version...",
     "error": "Fehler beim Laden der Release-Informationen",
@@ -80,8 +80,8 @@
     "apple_silicon": "Apple Silicon"
   },
   "developer": {
-    "headline": "Von einem Arzt für Ärzte entwickelt",
-    "description": "Dr. Thomas Entner hat QuartaBill basierend auf seiner eigenen Praxiserfahrung als Arbeitsmediziner entwickelt.",
+    "headline": "Automatisierung aus der Praxis",
+    "description": "Dr. Thomas Entner hat QuartaBill entwickelt, um seine eigenen wiederkehrenden Abrechnungsprozesse als Arbeitsmediziner zu automatisieren. Entstanden aus dem Bedarf nach effizienter Quartalsabrechnung.",
     "contact": "Kontakt"
   },
   "footer": {

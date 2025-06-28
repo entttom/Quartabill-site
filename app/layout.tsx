@@ -6,16 +6,19 @@ import MatomoTracking from '@/components/analytics/MatomoTracking'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'QuartaBill - Professionelle Quartalsabrechnungen für pauschale Honorare',
-  description: 'Desktop-App für pauschale Quartalsabrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync. Kostenlos für Windows, macOS und Linux.',
+  title: 'QuartaBill - Pauschale Quartalsabrechnungen automatisieren',
+  description: 'Automatisieren Sie Ihre pauschale Quartalsabrechnung mit QuartaBill. Intelligent, wiederkehrend, effizient. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister. Vollautomatische PDF-Generierung, E-Mail-Versand und Cloud-Sync. Kostenlos für Windows, macOS und Linux.',
   keywords: [
     'QuartaBill',
-    'Quartalsabrechnung',
+    'Quartalsabrechnung automatisieren',
     'Pauschalhonorare',
+    'Automatische Rechnungsstellung',
     'Desktop-App', 
     'PDF-Rechnung',
     'Kundenverwaltung',
     'Rechnungssoftware',
+    'Billing Automation',
+    'Wiederkehrende Rechnungen',
     'Arbeitsmediziner',
     'Beratungsunternehmen',
     'Dr. Thomas Entner'
@@ -37,8 +40,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'QuartaBill - Professionelle Quartalsabrechnungen für pauschale Honorare',
-    description: 'Desktop-App für pauschale Quartalsabrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister. Automatische PDF-Generierung, E-Mail-Integration und Cloud-Sync.',
+    title: 'QuartaBill - Pauschale Quartalsabrechnungen automatisieren',
+    description: 'Automatisieren Sie Ihre pauschale Quartalsabrechnung mit QuartaBill. Intelligent, wiederkehrend, effizient. Vollautomatische PDF-Generierung, E-Mail-Versand und Cloud-Sync.',
     url: 'https://quartabill.com',
     siteName: 'QuartaBill',
     images: [
@@ -54,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'QuartaBill - Professionelle Quartalsabrechnungen für pauschale Honorare',
-    description: 'Desktop-App für pauschale Quartalsabrechnungen. Ideal für Arbeitsmediziner, Beratungsunternehmen und Dienstleister.',
+    title: 'QuartaBill - Pauschale Quartalsabrechnungen automatisieren',
+    description: 'Automatisieren Sie pauschale Quartalsabrechnungen intelligent und effizient. Vollautomatische PDF-Generierung und E-Mail-Versand.',
     images: ['/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png'],
   },
   robots: {

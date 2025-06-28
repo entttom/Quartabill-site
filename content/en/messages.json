@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "For quarterly flat-rate billing",
+    "badge": "Automate quarterly billing",
     "headline": {
-      "part1": "Professional",
+      "part1": "Automate",
       "part2": "Quarterly Billing",
-      "part3": "Made Easy"
+      "part3": "Processes"
     },
-    "subline": "Streamline your quarterly billing with QuartaBill - the desktop app for flat-rate billing. Perfect for occupational physicians, consulting companies, and other service providers. Automatic PDF generation, email integration, and cloud sync included.",
+    "subline": "Automate your flat-rate quarterly billing with QuartaBill - the intelligent desktop app for recurring invoices. Perfect for occupational physicians, consulting companies, and service providers. Fully automated PDF generation, email delivery, and cloud sync included.",
     "features": {
       "multi_platform": "Multi-Platform Support",
       "cloud_sync": "Cloud-Sync Compatible", 
@@ -27,8 +27,8 @@
     "github": "GitHub"
   },
   "features": {
-    "headline": "All Features at a Glance",
-    "subline": "QuartaBill provides everything you need for professional quarterly billing. Designed for service providers with quarterly flat-rate fees.",
+    "headline": "Automation in Detail",
+    "subline": "QuartaBill automates every step of your quarterly billing - from customer management to PDF delivery. Designed for service providers with recurring quarterly flat-rate fees.",
     "customer_management": {
       "title": "Customer Management",
       "description": "Comprehensive customer data management with flexible service positions, drag-and-drop sorting, and German tax rates."
@@ -66,8 +66,8 @@
     "backup_restore": "Backup & Restore"
   },
   "download": {
-    "headline": "Download for Free Now",
-    "subline": "Available for all major operating systems",
+    "headline": "Start Automation Now",
+    "subline": "Free for all major operating systems - Setup in under 5 minutes",
     "version": "Current Version: {version}",
     "loading": "Loading current version...",
     "error": "Error loading release information",
@@ -80,8 +80,8 @@
     "apple_silicon": "Apple Silicon"
   },
   "developer": {
-    "headline": "Developed by a Doctor for Doctors",
-    "description": "Dr. Thomas Entner developed QuartaBill based on his own practical experience as an occupational physician.",
+    "headline": "Automation Born from Practice",
+    "description": "Dr. Thomas Entner developed QuartaBill to automate his own recurring billing processes as an occupational physician. Born from the need for efficient quarterly billing automation.",
     "contact": "Contact"
   },
   "footer": {
