@@ -1,0 +1,15 @@
+name: Build on Dispatch
+
+on:
+  repository_dispatch:
+    types: [build-trigger]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: echo "Update QuartaBill build version"
