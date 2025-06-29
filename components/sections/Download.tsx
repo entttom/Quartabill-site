@@ -140,13 +140,13 @@ const DownloadSection = () => {
           )}
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Jetzt kostenlos{' '}
+            {t('download.headline_pre', 'Jetzt kostenlos')}{' '}
             <span className="bg-gradient-to-r from-accent-400 to-primary-400 bg-clip-text text-transparent">
-              herunterladen
+              {t('download.headline_highlight', 'herunterladen')}
             </span>
           </h2>
           <p className="text-xl text-secondary-300 max-w-3xl mx-auto">
-            Verfügbar für alle gängigen Betriebssysteme. Keine Registrierung erforderlich - einfach herunterladen und sofort loslegen.
+            {t('download.subline_cta', 'Verfügbar für alle gängigen Betriebssysteme. Keine Registrierung erforderlich - einfach herunterladen und sofort loslegen.')}
           </p>
         </motion.div>
 

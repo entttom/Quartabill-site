@@ -79,7 +79,10 @@
     "portable": "Portable",
     "intel": "Intel",
     "apple_silicon": "Apple Silicon",
-    "version_label": "Version"
+    "version_label": "Version",
+    "headline_pre": "Download for free",
+    "headline_highlight": "now",
+    "subline_cta": "Available for all major operating systems. No registration required – just download and start immediately."
   },
   "developer": {
     "headline": "Automation Born from Practice",

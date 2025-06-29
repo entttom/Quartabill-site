@@ -78,7 +78,10 @@
     "installer": "Installer",
     "portable": "Portable",
     "intel": "Intel",
-    "apple_silicon": "Apple Silicon"
+    "apple_silicon": "Apple Silicon",
+    "headline_pre": "Jetzt kostenlos",
+    "headline_highlight": "herunterladen",
+    "subline_cta": "Verfügbar für alle gängigen Betriebssysteme. Keine Registrierung erforderlich - einfach herunterladen und sofort loslegen."
   },
   "developer": {
     "headline": "Automatisierung aus der Praxis",
