@@ -45,10 +45,33 @@ export function useTranslations() {
     }
   }
 
+  // Listen auf globale Locale-Änderungen (von anderen Komponenten)
+  useEffect(() => {
+    const handleLocaleChange = (e: Event) => {
+      const customEvent = e as CustomEvent<Locale>
+      if (customEvent.detail && customEvent.detail !== locale) {
+        setLocaleState(customEvent.detail)
+      }
+    }
+    if (typeof window !== 'undefined') {
+      window.addEventListener('localeChange', handleLocaleChange)
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('localeChange', handleLocaleChange)
+      }
+    }
+  }, [locale])
+
   const setLocale = (newLocale: Locale) => {
     globalLocale = newLocale
     setLocaleState(newLocale)
     localStorage.setItem('locale', newLocale)
+
+    // Andere Komponenten informieren
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent<Locale>('localeChange', { detail: newLocale }))
+    }
   }
 
   const t = (key: string, fallback?: string): string => {
