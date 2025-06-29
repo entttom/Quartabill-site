@@ -84,6 +84,47 @@
     "description": "Dr. Thomas Entner hat QuartaBill entwickelt, um seine eigenen wiederkehrenden Abrechnungsprozesse als Arbeitsmediziner zu automatisieren. Entstanden aus dem Bedarf nach effizienter Quartalsabrechnung.",
     "contact": "Kontakt"
   },
+  "faq": {
+    "badge": "Häufig gestellte Fragen",
+    "headline": "Haben Sie Fragen zu QuartaBill?",
+    "subline": "Hier finden Sie Antworten auf die wichtigsten Fragen rund um Installation, Verwendung und Features von QuartaBill.",
+    "items": {
+      "what_is": {
+        "question": "Was ist QuartaBill und wofür wird es verwendet?",
+        "answer": "QuartaBill ist eine spezialisierte Desktop-Anwendung für die Erstellung von Quartalsabrechnungen mit pauschalen Quartalshonoraren. Sie richtet sich an Dienstleister, die regelmäßige quartalsweise Abrechnungen erstellen müssen, wie z.B. Ärzte, Berater oder andere Fachkräfte mit wiederkehrenden Leistungen."
+      },
+      "installation": {
+        "question": "Wie installiere ich QuartaBill?",
+        "answer": "QuartaBill ist eine Electron-basierte Desktop-Anwendung. Laden Sie einfach die entsprechende Version für Ihr Betriebssystem (Windows, macOS oder Linux) von der Releases-Seite herunter und führen Sie die Installation aus. Die Anwendung ist sofort einsatzbereit."
+      },
+      "system_requirements": {
+        "question": "Welche Systemanforderungen hat QuartaBill?",
+        "answer": "QuartaBill läuft auf Windows 10+, macOS 10.15+ und Linux-Distributionen. Da es auf Electron basiert, benötigt es etwa 100-200 MB Festplattenspeicher und mindestens 4 GB RAM für optimale Performance. Eine Internetverbindung ist nur für Updates erforderlich."
+      },
+      "free": {
+        "question": "Ist QuartaBill kostenlos?",
+        "answer": "Ja, QuartaBill ist komplett kostenlos und Open Source. Der gesamte Quellcode ist auf GitHub verfügbar und steht unter einer freien Lizenz. Es gibt keine versteckten Kosten, Premium-Features oder Abonnements."
+      },
+      "eml_sending": {
+        "question": "Wie kann ich die EML-Dateien am einfachsten versenden?",
+        "answer": "Am einfachsten ist es, die von QuartaBill generierten EML-Dateien per Drag & Drop in die Entwürfe von Thunderbird zu ziehen. Von dort können Sie sie direkt verschicken. Diese Methode funktioniert zuverlässig und die E-Mail wird mit allen Formatierungen und Anhängen korrekt übernommen."
+      },
+      "data_export": {
+        "question": "Kann ich meine Daten exportieren oder sichern?",
+        "answer": "Absolut! QuartaBill speichert alle Daten lokal auf Ihrem Rechner. Sie haben jederzeit vollständigen Zugriff auf Ihre Daten und können diese problemlos sichern, exportieren oder übertragen. Die Anwendung erstellt auch automatische Backups Ihrer Abrechnungsdaten."
+      },
+      "support": {
+        "question": "Wo finde ich Support oder kann Feedback geben?",
+        "answer": "Bei Fragen, Problemen oder Verbesserungsvorschlägen können Sie gerne ein Issue auf GitHub erstellen oder direkt Kontakt über tom@entner.org aufnehmen. Die Community ist sehr hilfsbereit und Entwickler-Feedback wird geschätzt."
+      }
+    },
+    "cta": {
+      "headline": "Weitere Fragen?",
+      "description": "Haben Sie eine Frage, die hier nicht beantwortet wird? Zögern Sie nicht, uns zu kontaktieren oder ein Issue auf GitHub zu erstellen.",
+      "github_button": "GitHub Issue erstellen",
+      "email_button": "E-Mail senden"
+    }
+  },
   "footer": {
     "copyright": "© 2024 Dr. Thomas Entner",
     "license": "MIT Lizenz",

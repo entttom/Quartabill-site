@@ -24,6 +24,7 @@ const Navigation = () => {
     { name: t('nav.features', 'Features'), href: '#features' },
     { name: t('nav.screenshots', 'Screenshots'), href: '#features' },
     { name: t('nav.download', 'Download'), href: '#download' },
+    { name: 'FAQ', href: '#faq' },
     { name: t('nav.github', 'GitHub'), href: 'https://github.com/entttom/QuartaBill', external: true }
   ]
 
