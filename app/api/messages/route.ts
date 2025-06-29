@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync } from 'fs'
-import { join } from 'path'
+
+export const runtime = 'edge'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -12,11 +12,12 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const filePath = join(process.cwd(), 'content', locale, 'messages.json')
-    const fileContents = readFileSync(filePath, 'utf8')
-    const messages = JSON.parse(fileContents)
+    const messagesModule =
+      locale === 'en'
+        ? await import('@/content/en/messages.json')
+        : await import('@/content/de/messages.json')
     
-    return NextResponse.json(messages, {
+    return NextResponse.json(messagesModule.default, {
       headers: {
         'Cache-Control': 'public, max-age=3600, s-maxage=3600',
       },
