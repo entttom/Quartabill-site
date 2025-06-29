@@ -81,7 +81,7 @@ export default function EnglishRootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-secondary-50 text-secondary-900 dark:bg-secondary-900 dark:text-secondary-100`}>
         {children}
         <MatomoTracking />
       </body>
