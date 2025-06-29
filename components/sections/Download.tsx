@@ -135,7 +135,7 @@ const DownloadSection = () => {
             </div>
           ) : (
             <div className="inline-flex items-center px-4 py-2 mb-6 bg-accent-500/20 text-accent-300 rounded-full text-sm font-medium">
-              🚀 {t('download.version', `Aktuelle Version: ${formatVersionForDisplay(releaseInfo?.version || 'v1.6.2')}`)}
+              🚀 {t('download.version', 'Aktuelle Version: {version}').replace('{version}', formatVersionForDisplay(releaseInfo?.version || 'v1.6.2'))}
             </div>
           )}
 
