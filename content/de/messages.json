@@ -24,7 +24,8 @@
     "features": "Features",
     "screenshots": "Screenshots",
     "download": "Download",
-    "github": "GitHub"
+    "github": "GitHub",
+    "faq": "FAQ"
   },
   "features": {
     "headline": "Automatisierung im Detail",
@@ -130,6 +131,15 @@
     "license": "MIT Lizenz",
     "links": "Links",
     "releases": "Releases",
-    "documentation": "Dokumentation"
+    "documentation": "Dokumentation",
+    "description": "Professionelle Quartalsabrechnungen für pauschale Quartalshonorare. Entwickelt für Dienstleister mit regelmäßigen Abrechnungen.",
+    "techstack_prefix": "Entwickelt mit",
+    "techstack_suffix": "und Electron + React",
+    "sections": {
+      "links": "Links",
+      "developer": "Entwickler",
+      "legal": "Rechtliches"
+    },
+    "copyright_full": "© 2024 Dr. Thomas Entner. Alle Rechte vorbehalten."
   }
 } 

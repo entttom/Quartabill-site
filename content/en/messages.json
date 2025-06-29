@@ -24,7 +24,8 @@
     "features": "Features",
     "screenshots": "Screenshots",
     "download": "Download",
-    "github": "GitHub"
+    "github": "GitHub",
+    "faq": "FAQ"
   },
   "features": {
     "headline": "Automation in Detail",
@@ -130,6 +131,15 @@
     "license": "MIT License",
     "links": "Links",
     "releases": "Releases",
-    "documentation": "Documentation"
+    "documentation": "Documentation",
+    "description": "Professional quarterly billing with flat-rate fees. Built for service providers with recurring billing.",
+    "techstack_prefix": "Built with",
+    "techstack_suffix": "and Electron + React",
+    "sections": {
+      "links": "Links",
+      "developer": "Developer",
+      "legal": "Legal"
+    },
+    "copyright_full": "© 2024 Dr. Thomas Entner. All rights reserved."
   }
 } 

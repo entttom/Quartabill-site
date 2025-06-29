@@ -19,7 +19,7 @@ const DownloadSection = () => {
         const release = await getLatestRelease()
         setReleaseInfo(release)
       } catch (err) {
-        setError('Fehler beim Laden der Release-Informationen')
+        setError(t('download.error', 'Fehler beim Laden der Release-Informationen'))
         console.error('Error fetching release info:', err)
       } finally {
         setLoading(false)

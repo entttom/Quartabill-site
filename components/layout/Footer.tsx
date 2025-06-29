@@ -3,11 +3,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, ExternalLink, Heart } from 'lucide-react'
+import { useTranslations } from '@/lib/useTranslations'
 
 const Footer = () => {
+  const { t } = useTranslations()
+
   const links = [
     {
-      category: 'Links',
+      category: t('footer.sections.links', 'Links'),
       items: [
         { name: 'GitHub Repository', href: 'https://github.com/entttom/QuartaBill', external: true },
         { name: 'Releases', href: 'https://github.com/entttom/QuartaBill/releases', external: true },
@@ -16,7 +19,7 @@ const Footer = () => {
       ]
     },
     {
-      category: 'Entwickler',
+      category: t('footer.sections.developer', 'Entwickler'),
       items: [
         { name: 'Dr. Thomas Entner', href: 'https://github.com/entttom', external: true },
         { name: 'Kontakt', href: 'mailto:tom@entner.org', external: true },
@@ -26,7 +29,7 @@ const Footer = () => {
       ]
     },
     {
-      category: 'Rechtliches',
+      category: t('footer.sections.legal', 'Rechtliches'),
       items: [
         { name: 'Changelog', href: 'https://github.com/entttom/QuartaBill/blob/main/CHANGELOG.md', external: true }
       ]
@@ -63,15 +66,14 @@ const Footer = () => {
                   QuartaBill
                 </div>
                 <p className="text-secondary-300 mb-6 leading-relaxed">
-                              Professionelle Quartalsabrechnungen für pauschale Quartalshonorare.
-            Entwickelt für Dienstleister mit regelmäßigen Abrechnungen.
+                  {t('footer.description', 'Professionelle Quartalsabrechnungen für pauschale Quartalshonorare. Entwickelt für Dienstleister mit regelmäßigen Abrechnungen.')}
                 </p>
                 
                 {/* Tech Stack */}
                 <div className="flex items-center gap-2 text-sm text-secondary-400">
-                  <span>Entwickelt mit</span>
+                  <span>{t('footer.techstack_prefix', 'Entwickelt mit')}</span>
                   <Heart className="w-4 h-4 text-red-400" />
-                  <span>und Electron + React</span>
+                  <span>{t('footer.techstack_suffix', 'und Electron + React')}</span>
                 </div>
               </motion.div>
             </div>
@@ -121,7 +123,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-secondary-400 text-sm">
-              © 2024 Dr. Thomas Entner. Alle Rechte vorbehalten.
+              {t('footer.copyright_full', '© 2024 Dr. Thomas Entner. Alle Rechte vorbehalten.')}
             </div>
             
             <div className="flex items-center gap-6">
