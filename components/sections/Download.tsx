@@ -27,7 +27,7 @@ const DownloadSection = () => {
     }
 
     fetchReleaseInfo()
-  }, [])
+  }, [t])
 
   const getDownloadsForPlatform = (platform: 'windows' | 'macos' | 'linux'): DownloadInfo[] => {
     if (!releaseInfo) return []
@@ -63,14 +63,35 @@ const DownloadSection = () => {
 
   const getTypeName = (type: string, architecture?: string) => {
     switch (type) {
-      case 'installer': return 'Installer'
-      case 'portable': return 'Portable'
-      case 'dmg': return architecture === 'arm64' ? 'Apple Silicon' : 'Intel Macs'
-      case 'appimage': return 'Universal'
-      case 'deb': return 'Debian/Ubuntu'
+      case 'installer': return t('download.types.installer', 'Installer')
+      case 'portable': return t('download.types.portable', 'Portable')
+      case 'dmg': return architecture === 'arm64' 
+        ? t('download.types.apple_silicon', 'Apple Silicon') 
+        : t('download.types.intel', 'Intel Macs')
+      case 'appimage': return t('download.types.appimage', 'Universal')
+      case 'deb': return t('download.types.deb', 'Debian/Ubuntu')
       default: return type
     }
   }
+
+  const features = [
+    {
+      icon: Shield,
+      id: 'signed'
+    },
+    {
+      icon: Zap,
+      id: 'ready_to_use'
+    },
+    {
+      icon: Globe,
+      id: 'offline'
+    },
+    {
+      icon: CheckCircle,
+      id: 'open_source'
+    }
+  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -100,15 +121,15 @@ const DownloadSection = () => {
         <motion.div
           className="absolute top-20 right-20 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl"
           animate={{ 
-            scale: [1, 1.2, 1],
+            scale: [1.2, 1, 1.2],
             opacity: [0.1, 0.2, 0.1]
           }}
-          transition={{ duration: 8, repeat: Infinity }}
+          transition={{ duration: 12, repeat: Infinity }}
         />
         <motion.div
           className="absolute bottom-20 left-20 w-60 h-60 bg-accent-500/10 rounded-full blur-3xl"
           animate={{ 
-            scale: [1.2, 1, 1.2],
+            scale: [1, 1.3, 1],
             opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ duration: 10, repeat: Infinity }}
@@ -127,7 +148,7 @@ const DownloadSection = () => {
           {loading ? (
             <div className="inline-flex items-center px-4 py-2 mb-6 bg-accent-500/20 text-accent-300 rounded-full text-sm font-medium">
               <div className="animate-spin rounded-full h-4 w-4 border-2 border-accent-300 border-t-transparent mr-2"></div>
-              Lade aktuelle Version...
+              {t('download.loading', 'Lade aktuelle Version...')}
             </div>
           ) : error ? (
             <div className="inline-flex items-center px-4 py-2 mb-6 bg-red-500/20 text-red-300 rounded-full text-sm font-medium">
@@ -182,7 +203,7 @@ const DownloadSection = () => {
                           </h3>
                           {platform === 'macos' && (
                             <span className="text-xs text-accent-400 font-medium">
-                              ✅ Signiert & Notarisiert
+                              {t('download.signed_notarized', '✅ Signiert & Notarisiert')}
                             </span>
                           )}
                         </div>
@@ -191,9 +212,7 @@ const DownloadSection = () => {
 
                     {/* System Requirements */}
                     <p className="text-secondary-300 text-sm mb-6">
-                      {platform === 'windows' && 'Windows 10 oder höher'}
-                      {platform === 'macos' && 'macOS 10.14 (Mojave) oder höher'}
-                      {platform === 'linux' && 'Ubuntu 18.04 oder äquivalent'}
+                      {t(`download.requirements.${platform}`, `${platform} requirements`)}
                     </p>
 
                     {/* Download Links */}
@@ -240,28 +259,7 @@ const DownloadSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {[
-            {
-              icon: Shield,
-              title: 'Vollständig signiert',
-              description: 'Alle Downloads sind digital signiert und von Antivirus-Software erkannt.'
-            },
-            {
-              icon: Zap,
-              title: 'Sofort einsatzbereit',
-              description: 'Keine Registrierung oder Installation zusätzlicher Software erforderlich.'
-            },
-            {
-              icon: Globe,
-              title: 'Offline verfügbar',
-              description: 'Alle Daten bleiben lokal auf Ihrem Gerät. Keine Internetverbindung erforderlich.'
-            },
-            {
-              icon: CheckCircle,
-              title: 'Kostenlos & Open Source',
-              description: 'QuartaBill ist komplett kostenlos und der Quellcode ist auf GitHub verfügbar.'
-            }
-          ].map((feature, index) => {
+          {features.map((feature, index) => {
             const IconComponent = feature.icon
             return (
               <motion.div
@@ -273,8 +271,8 @@ const DownloadSection = () => {
                   <div className="inline-flex p-3 rounded-lg bg-accent-500/20 text-accent-400 mb-4">
                     <IconComponent className="w-6 h-6" />
                   </div>
-                  <h4 className="font-semibold text-white mb-2">{feature.title}</h4>
-                  <p className="text-sm text-secondary-300">{feature.description}</p>
+                  <h4 className="font-semibold text-white mb-2">{t(`download.features.${feature.id}.title`)}</h4>
+                  <p className="text-sm text-secondary-300">{t(`download.features.${feature.id}.description`)}</p>
                 </div>
               </motion.div>
             )
@@ -291,7 +289,7 @@ const DownloadSection = () => {
         >
           <div className="glass-dark p-6 rounded-xl inline-block border border-white/10">
             <p className="text-secondary-300 mb-4">
-              Möchten Sie den Quellcode einsehen oder zur Entwicklung beitragen?
+              {t('download.github_cta.text', 'Möchten Sie den Quellcode einsehen oder zur Entwicklung beitragen?')}
             </p>
             <a
               href="https://github.com/entttom/QuartaBill"
@@ -301,7 +299,7 @@ const DownloadSection = () => {
               onClick={trackGitHubVisit}
             >
               <Github className="w-5 h-5 mr-2" />
-              Auf GitHub ansehen
+              {t('download.github_cta.button', 'Auf GitHub ansehen')}
             </a>
           </div>
         </motion.div>

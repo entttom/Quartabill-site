@@ -13,8 +13,10 @@ import {
 } from 'lucide-react'
 import ImageLightbox from '@/components/ui/ImageLightbox'
 import { trackLightboxOpen } from '@/lib/analytics'
+import { useTranslations } from '@/lib/useTranslations'
 
 const Features = () => {
+  const { t, locale } = useTranslations()
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxImage, setLightboxImage] = useState({ src: '', alt: '', title: '' })
 
@@ -30,49 +32,43 @@ const Features = () => {
     {
       id: 'customer_management',
       icon: Users,
-      title: 'Kundenverwaltung',
-      description: 'Umfassende Verwaltung von Kundendaten mit flexiblen Leistungspositionen, Drag-and-Drop Sortierung und deutschen Steuersätzen.',
-      screenshot: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-2-de.png',
+      screenshot_de: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-2-de.png',
+      screenshot_en: '/screenshots/en/QuartaBill-Screenshot-2025-06-27-2-en.png',
       color: 'from-blue-500 to-purple-600'
     },
     {
       id: 'invoice_generation',
       icon: FileText,
-      title: 'Rechnungserstellung',
-      description: 'Batch-Generierung aller Kunden eines Quartals mit anpassbaren Rechnungsnummern und automatischer Steuerberechnung.',
-      screenshot: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-3-de.png',
+      screenshot_de: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-3-de.png',
+      screenshot_en: '/screenshots/en/QuartaBill-Screenshot-2025-06-27-3-en.png',
       color: 'from-green-500 to-teal-600'
     },
     {
       id: 'invoice_history',
       icon: History,
-      title: 'Rechnungshistorie',
-      description: 'Übersichtliche Historie aller erstellten Rechnungen mit intelligenter Pagination und Suchfunktion.',
-      screenshot: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-4-de.png',
+      screenshot_de: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-4-de.png',
+      screenshot_en: '/screenshots/en/QuartaBill-Screenshot-2025-06-27-4-en.png',
       color: 'from-orange-500 to-red-600'
     },
     {
       id: 'settings',
       icon: Settings,
-      title: 'Einstellungen',
-      description: 'Vollständige Konfiguration von Firmendaten, Pfaden, Logos und personalisierten E-Mail-Templates.',
-      screenshot: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-5-de.png',
+      screenshot_de: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-5-de.png',
+      screenshot_en: '/screenshots/en/QuartaBill-Screenshot-2025-06-27-5-en.png',
       color: 'from-purple-500 to-pink-600'
     },
     {
       id: 'backup',
       icon: Database,
-      title: 'Backup & Restore',
-      description: 'Automatische Backups mit Wiederherstellungsfunktion für maximale Datensicherheit.',
-      screenshot: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-6-de.png',
+      screenshot_de: '/screenshots/de/QuartaBill-Screenshot-2025-06-27-6-de.png',
+      screenshot_en: '/screenshots/en/QuartaBill-Screenshot-2025-06-27-6-en.png',
       color: 'from-indigo-500 to-blue-600'
     },
     {
       id: 'pdf_output',
       icon: FileOutput,
-      title: 'PDF-Ausgabe',
-      description: 'Professionelle PDF-Rechnungen mit modernem Design, Logo-Integration und deutscher Formatierung.',
-      screenshot: '/screenshots/de/Rechnung_Beispiel.png',
+      screenshot_de: '/screenshots/de/Rechnung_Beispiel.png',
+      screenshot_en: '/screenshots/de/Rechnung_Beispiel.png', // Assuming same for both
       color: 'from-emerald-500 to-green-600'
     }
   ]
@@ -130,12 +126,11 @@ const Features = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary-900 mb-4 sm:mb-6 leading-tight">
-            Alle Features im{' '}
-            <span className="text-gradient block sm:inline">Überblick</span>
+            {t('features.headline.part1', 'Alle Features im')}{' '}
+            <span className="text-gradient block sm:inline">{t('features.headline.part2', 'Überblick')}</span>
           </h2>
           <p className="text-lg sm:text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed px-4">
-            QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen. 
-            Entwickelt für Dienstleister mit pauschalen Quartalshonoraren.
+            {t('features.subline_features', 'QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen. Entwickelt für Dienstleister mit pauschalen Quartalshonoraren.')}
           </p>
         </motion.div>
 
@@ -149,6 +144,9 @@ const Features = () => {
         >
           {features.map((feature, index) => {
             const IconComponent = feature.icon
+            const title = t(`features.${feature.id}.title`, `Feature ${feature.id}`)
+            const description = t(`features.${feature.id}.description`, 'Description missing')
+            const screenshotSrc = locale === 'en' ? feature.screenshot_en : feature.screenshot_de
             
             return (
               <motion.div
@@ -163,27 +161,27 @@ const Features = () => {
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-secondary-900">
-                      {feature.title}
+                      {title}
                     </h3>
                   </div>
 
                   {/* Description */}
                   <p className="text-secondary-600 mb-6 leading-relaxed">
-                    {feature.description}
+                    {description}
                   </p>
 
                   {/* Screenshot Preview */}
                   <div 
                     className="relative overflow-hidden rounded-lg bg-secondary-100 group-hover:shadow-lg transition-shadow cursor-pointer"
-                    onClick={() => openLightbox(feature.screenshot, `${feature.title} Screenshot`, feature.title)}
+                    onClick={() => openLightbox(screenshotSrc, `${title} Screenshot`, title)}
                   >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                     >
                       <Image
-                        src={feature.screenshot}
-                        alt={`${feature.title} Screenshot`}
+                        src={screenshotSrc}
+                        alt={`${title} Screenshot`}
                         width={400}
                         height={300}
                         className="w-full h-48 object-cover object-top"
@@ -193,7 +191,7 @@ const Features = () => {
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <span className="text-white font-medium">
-                        Screenshot vergrößern
+                        {t('features.enlarge_screenshot', 'Screenshot vergrößern')}
                       </span>
                     </div>
                   </div>
@@ -213,10 +211,10 @@ const Features = () => {
         >
           <div className="glass p-8 rounded-2xl inline-block border border-white/30">
             <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-              Überzeugt? Testen Sie QuartaBill kostenlos!
+              {t('features.cta.headline', 'Überzeugt? Testen Sie QuartaBill kostenlos!')}
             </h3>
             <p className="text-secondary-600 mb-6">
-              Keine Registrierung erforderlich. Einfach herunterladen und sofort loslegen.
+              {t('features.cta.subline', 'Keine Registrierung erforderlich. Einfach herunterladen und sofort loslegen.')}
             </p>
             <motion.button
               className="btn-primary"
@@ -224,7 +222,7 @@ const Features = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Jetzt kostenlos herunterladen
+              {t('features.cta.button', 'Jetzt kostenlos herunterladen')}
             </motion.button>
           </div>
         </motion.div>

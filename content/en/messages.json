@@ -30,6 +30,10 @@
   "features": {
     "headline": "Automation in Detail",
     "subline": "QuartaBill automates every step of your quarterly billing - from customer management to PDF delivery. Designed for service providers with recurring quarterly flat-rate fees.",
+    "subline_features": "QuartaBill offers everything you need for professional quarterly billing. Designed for service providers with recurring flat-rate fees.",
+    "headline.part1": "All Features at a",
+    "headline.part2": "Glance",
+    "enlarge_screenshot": "Enlarge Screenshot",
     "customer_management": {
       "title": "Customer Management",
       "description": "Comprehensive customer data management with flexible service positions, drag-and-drop sorting, and German tax rates."
@@ -53,6 +57,11 @@
     "pdf_output": {
       "title": "PDF Output",
       "description": "Professional PDF invoices with modern design, logo integration, and German formatting."
+    },
+    "cta": {
+      "headline": "Convinced? Try QuartaBill for free!",
+      "subline": "No registration required. Just download and get started right away.",
+      "button": "Download for free now"
     }
   },
   "tech_specs": {
@@ -82,7 +91,43 @@
     "version_label": "Version",
     "headline_pre": "Download for free",
     "headline_highlight": "now",
-    "subline_cta": "Available for all major operating systems. No registration required – just download and start immediately."
+    "subline_cta": "Available for all major operating systems. No registration required – just download and start immediately.",
+    "signed_notarized": "✅ Signed & Notarized",
+    "requirements": {
+      "windows": "Windows 10 or higher",
+      "macos": "macOS 10.14 (Mojave) or higher",
+      "linux": "Ubuntu 18.04 or equivalent"
+    },
+    "types": {
+      "installer": "Installer",
+      "portable": "Portable",
+      "apple_silicon": "Apple Silicon",
+      "intel": "Intel Macs",
+      "appimage": "Universal",
+      "deb": "Debian/Ubuntu"
+    },
+    "features": {
+      "signed": {
+        "title": "Fully Signed",
+        "description": "All downloads are digitally signed and recognized by antivirus software."
+      },
+      "ready_to_use": {
+        "title": "Ready to Use",
+        "description": "No registration or installation of additional software required."
+      },
+      "offline": {
+        "title": "Offline Available",
+        "description": "All data remains locally on your device. No internet connection required."
+      },
+      "open_source": {
+        "title": "Free & Open Source",
+        "description": "QuartaBill is completely free and the source code is available on GitHub."
+      }
+    },
+    "github_cta": {
+      "text": "Want to view the source code or contribute to development?",
+      "button": "View on GitHub"
+    }
   },
   "developer": {
     "headline": "Automation Born from Practice",

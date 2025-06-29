@@ -30,6 +30,10 @@
   "features": {
     "headline": "Automatisierung im Detail",
     "subline": "QuartaBill automatisiert jeden Schritt Ihrer Quartalsabrechnung - von der Kundenverwaltung bis zum PDF-Versand. Entwickelt für Dienstleister mit wiederkehrenden pauschalen Quartalshonoraren.",
+    "subline_features": "QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen. Entwickelt für Dienstleister mit pauschalen Quartalshonoraren.",
+    "headline.part1": "Alle Features im",
+    "headline.part2": "Überblick",
+    "enlarge_screenshot": "Screenshot vergrößern",
     "customer_management": {
       "title": "Kundenverwaltung",
       "description": "Umfassende Verwaltung von Kundendaten mit flexiblen Leistungspositionen, Drag-and-Drop Sortierung und deutschen Steuersätzen."
@@ -53,6 +57,11 @@
     "pdf_output": {
       "title": "PDF-Ausgabe",
       "description": "Professionelle PDF-Rechnungen mit modernem Design, Logo-Integration und deutscher Formatierung."
+    },
+    "cta": {
+      "headline": "Überzeugt? Testen Sie QuartaBill kostenlos!",
+      "subline": "Keine Registrierung erforderlich. Einfach herunterladen und sofort loslegen.",
+      "button": "Jetzt kostenlos herunterladen"
     }
   },
   "tech_specs": {
@@ -81,7 +90,43 @@
     "apple_silicon": "Apple Silicon",
     "headline_pre": "Jetzt kostenlos",
     "headline_highlight": "herunterladen",
-    "subline_cta": "Verfügbar für alle gängigen Betriebssysteme. Keine Registrierung erforderlich - einfach herunterladen und sofort loslegen."
+    "subline_cta": "Verfügbar für alle gängigen Betriebssysteme. Keine Registrierung erforderlich - einfach herunterladen und sofort loslegen.",
+    "signed_notarized": "✅ Signiert & Notarisiert",
+    "requirements": {
+      "windows": "Windows 10 oder höher",
+      "macos": "macOS 10.14 (Mojave) oder höher",
+      "linux": "Ubuntu 18.04 oder äquivalent"
+    },
+    "types": {
+      "installer": "Installer",
+      "portable": "Portable",
+      "apple_silicon": "Apple Silicon",
+      "intel": "Intel Macs",
+      "appimage": "Universal",
+      "deb": "Debian/Ubuntu"
+    },
+    "features": {
+      "signed": {
+        "title": "Vollständig signiert",
+        "description": "Alle Downloads sind digital signiert und von Antivirus-Software erkannt."
+      },
+      "ready_to_use": {
+        "title": "Sofort einsatzbereit",
+        "description": "Keine Registrierung oder Installation zusätzlicher Software erforderlich."
+      },
+      "offline": {
+        "title": "Offline verfügbar",
+        "description": "Alle Daten bleiben lokal auf Ihrem Gerät. Keine Internetverbindung erforderlich."
+      },
+      "open_source": {
+        "title": "Kostenlos & Open Source",
+        "description": "QuartaBill ist komplett kostenlos und der Quellcode ist auf GitHub verfügbar."
+      }
+    },
+    "github_cta": {
+      "text": "Möchten Sie den Quellcode einsehen oder zur Entwicklung beitragen?",
+      "button": "Auf GitHub ansehen"
+    }
   },
   "developer": {
     "headline": "Automatisierung aus der Praxis",

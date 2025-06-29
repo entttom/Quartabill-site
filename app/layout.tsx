@@ -81,7 +81,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body className={`${inter.className} bg-secondary-50 text-secondary-900 dark:bg-secondary-900 dark:text-secondary-100`}>
+      <body className={inter.className}>
         {children}
         {/* DSGVO-konforme Analytics ohne Cookies */}
         <MatomoTracking />
