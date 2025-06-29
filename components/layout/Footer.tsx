@@ -139,7 +139,7 @@ const Footer = () => {
               </motion.a>
               
               <div className="text-secondary-500 text-sm">
-                Version 1.5.0
+                {t('footer.version_label', 'Version')} 1.5.0
               </div>
             </div>
           </div>

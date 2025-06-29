@@ -78,7 +78,8 @@
     "installer": "Installer",
     "portable": "Portable",
     "intel": "Intel",
-    "apple_silicon": "Apple Silicon"
+    "apple_silicon": "Apple Silicon",
+    "version_label": "Version"
   },
   "developer": {
     "headline": "Automation Born from Practice",

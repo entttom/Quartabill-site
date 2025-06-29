@@ -140,6 +140,7 @@
       "developer": "Entwickler",
       "legal": "Rechtliches"
     },
-    "copyright_full": "© 2024 Dr. Thomas Entner. Alle Rechte vorbehalten."
+    "copyright_full": "© 2024 Dr. Thomas Entner. Alle Rechte vorbehalten.",
+    "version_label": "Version"
   }
 } 
