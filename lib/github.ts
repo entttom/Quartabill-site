@@ -95,6 +95,16 @@ function parseDownloads(assets: GitHubRelease['assets'], version: string): Downl
         size,
         downloadCount: download_count
       })
+    } else if (name.endsWith('.exe') && !name.includes('Setup')) {
+      downloads.push({
+        platform: 'windows',
+        type: 'portable',
+        architecture: 'x64',
+        filename: name,
+        url: browser_download_url,
+        size,
+        downloadCount: download_count
+      })
     }
     
     // macOS Downloads
@@ -154,6 +164,15 @@ function getFallbackRelease(): ReleaseInfo {
         filename: `QuartaBill-Setup-${version.replace('v', '')}.exe`,
         url: `https://github.com/${GITHUB_REPO}/releases/download/${version}/QuartaBill-Setup-${version.replace('v', '')}.exe`,
         size: 125829120, // ~120 MB
+        downloadCount: 0
+      },
+      {
+        platform: 'windows',
+        type: 'portable',
+        architecture: 'x64',
+        filename: `QuartaBill-${version.replace('v', '')}.exe`,
+        url: `https://github.com/${GITHUB_REPO}/releases/download/${version}/QuartaBill-${version.replace('v', '')}.exe`,
+        size: 120586240, // ~115 MB
         downloadCount: 0
       },
       {
