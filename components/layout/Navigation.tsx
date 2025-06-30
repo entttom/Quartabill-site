@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Github, Download } from 'lucide-react'
 import Image from 'next/image'
 import Button from '@/components/ui/Button'
+import DarkModeToggle from '@/components/ui/DarkModeToggle'
 import { useTranslations } from '@/lib/useTranslations'
 
 const Navigation = () => {
@@ -42,7 +43,7 @@ const Navigation = () => {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? 'glass backdrop-blur-xl border-b border-white/20' 
+          ? 'glass backdrop-blur-xl border-b border-white/20 dark:border-white/10' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -63,7 +64,7 @@ const Navigation = () => {
               height={40}
               className="w-8 h-8 sm:w-10 sm:h-10"
             />
-            <div className="text-xl sm:text-2xl font-bold text-primary-600">
+            <div className="text-xl sm:text-2xl font-bold text-primary-600 dark:text-primary-400">
               QuartaBill
             </div>
           </motion.div>
@@ -74,7 +75,7 @@ const Navigation = () => {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-secondary-700 hover:text-primary-600 transition-colors font-medium"
+                className="text-secondary-700 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 transition-colors font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -83,12 +84,12 @@ const Navigation = () => {
             ))}
             
             {/* Language Switcher */}
-            <div className="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg">
+            <div className="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg dark:bg-black/20 dark:border-white/10">
               <motion.button
                 className={`text-sm font-medium px-2 py-1 rounded transition-colors ${
                   locale === 'de' 
-                    ? 'text-primary-600 bg-primary-100' 
-                    : 'text-secondary-500 hover:text-secondary-700'
+                    ? 'text-primary-600 bg-primary-100 dark:bg-primary-900/30' 
+                    : 'text-secondary-500 hover:text-secondary-700 dark:text-secondary-400 dark:hover:text-secondary-300'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -99,8 +100,8 @@ const Navigation = () => {
               <motion.button
                 className={`text-sm font-medium px-2 py-1 rounded transition-colors ${
                   locale === 'en' 
-                    ? 'text-primary-600 bg-primary-100' 
-                    : 'text-secondary-500 hover:text-secondary-700'
+                    ? 'text-primary-600 bg-primary-100 dark:bg-primary-900/30' 
+                    : 'text-secondary-500 hover:text-secondary-700 dark:text-secondary-400 dark:hover:text-secondary-300'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -109,6 +110,9 @@ const Navigation = () => {
                 EN
               </motion.button>
             </div>
+            
+            {/* Dark Mode Toggle */}
+            <DarkModeToggle />
             
             <Button
               variant="primary"
@@ -123,7 +127,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden p-2 text-secondary-700"
+            className="md:hidden p-2 text-secondary-700 dark:text-secondary-300"
             onClick={() => setIsOpen(!isOpen)}
             whileTap={{ scale: 0.95 }}
           >
@@ -148,7 +152,7 @@ const Navigation = () => {
                   <motion.button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-left text-secondary-700 hover:text-primary-600 transition-colors font-medium py-2"
+                    className="text-left text-secondary-700 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 transition-colors font-medium py-2"
                     whileHover={{ x: 10 }}
                   >
                     {item.name}
@@ -158,15 +162,15 @@ const Navigation = () => {
                 {/* Mobile Language Switcher */}
                 <div className="py-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-secondary-600 font-medium">
+                    <span className="text-sm text-secondary-600 font-medium dark:text-secondary-400">
                       {locale === 'de' ? 'Sprache:' : 'Language:'}
                     </span>
                     <div className="flex items-center gap-2">
                       <motion.button
                         className={`text-sm font-medium px-3 py-1 rounded transition-colors ${
                           locale === 'de' 
-                            ? 'text-primary-600 bg-primary-100' 
-                            : 'text-secondary-500 hover:text-secondary-700 border border-secondary-200'
+                            ? 'text-primary-600 bg-primary-100 dark:bg-primary-900/30' 
+                            : 'text-secondary-500 hover:text-secondary-700 border border-secondary-200 dark:text-secondary-400 dark:hover:text-secondary-300 dark:border-secondary-600'
                         }`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -177,8 +181,8 @@ const Navigation = () => {
                       <motion.button
                         className={`text-sm font-medium px-3 py-1 rounded transition-colors ${
                           locale === 'en' 
-                            ? 'text-primary-600 bg-primary-100' 
-                            : 'text-secondary-500 hover:text-secondary-700 border border-secondary-200'
+                            ? 'text-primary-600 bg-primary-100 dark:bg-primary-900/30' 
+                            : 'text-secondary-500 hover:text-secondary-700 border border-secondary-200 dark:text-secondary-400 dark:hover:text-secondary-300 dark:border-secondary-600'
                         }`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -187,6 +191,16 @@ const Navigation = () => {
                         English
                       </motion.button>
                     </div>
+                  </div>
+                </div>
+                
+                {/* Mobile Dark Mode Toggle */}
+                <div className="py-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm text-secondary-600 font-medium dark:text-secondary-400">
+                      {locale === 'de' ? 'Design:' : 'Theme:'}
+                    </span>
+                    <DarkModeToggle />
                   </div>
                 </div>
                 

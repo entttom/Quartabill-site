@@ -31,11 +31,12 @@
     "faq": "FAQ"
   },
   "features": {
-    "headline": "Automation in Detail",
     "subline": "QuartaBill automates every step of your quarterly billing - from customer management to PDF delivery. Designed for service providers with recurring quarterly flat-rate fees.",
     "subline_features": "QuartaBill offers everything you need for professional quarterly billing. Designed for service providers with recurring flat-rate fees.",
-    "headline.part1": "All Features at a",
-    "headline.part2": "Glance",
+    "headline": {
+      "part1": "All Features at a",
+      "part2": "Glance"
+    },
     "enlarge_screenshot": "Enlarge Screenshot",
     "customer_management": {
       "title": "Customer Management",

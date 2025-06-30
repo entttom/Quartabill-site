@@ -31,11 +31,12 @@
     "faq": "FAQ"
   },
   "features": {
-    "headline": "Automatisierung im Detail",
-    "subline": "QuartaBill automatisiert jeden Schritt Ihrer Quartalsabrechnung - von der Kundenverwaltung bis zum PDF-Versand. Entwickelt für Dienstleister mit wiederkehrenden pauschalen Quartalshonoraren.",
+    "subline": "QuartaBill automatisiert jeden Schritt Ihrer Quartalsabrechnung – von der Kundenverwaltung bis zur PDF-Zustellung. Entwickelt für Dienstleister mit wiederkehrenden Quartalspauschalen.",
     "subline_features": "QuartaBill bietet alles, was Sie für eine professionelle Quartalsabrechnung benötigen. Entwickelt für Dienstleister mit pauschalen Quartalshonoraren.",
-    "headline.part1": "Alle Features im",
-    "headline.part2": "Überblick",
+    "headline": {
+      "part1": "Alle Features im",
+      "part2": "Überblick"
+    },
     "enlarge_screenshot": "Screenshot vergrößern",
     "customer_management": {
       "title": "Kundenverwaltung",

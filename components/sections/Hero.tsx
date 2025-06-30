@@ -28,7 +28,7 @@ const Hero = () => {
     : '/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png'
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-secondary-900 dark:via-secondary-800 dark:to-secondary-900">
       {/* Professional Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.08)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.05)_0%,transparent_50%)] opacity-70" />
       
@@ -66,7 +66,7 @@ const Hero = () => {
 
             {/* Headline */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-4 sm:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 dark:text-secondary-100 mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -78,7 +78,7 @@ const Hero = () => {
 
             {/* Subline */}
             <motion.p
-              className="text-base sm:text-lg md:text-xl text-secondary-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-secondary-600 dark:text-secondary-400 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -88,7 +88,7 @@ const Hero = () => {
 
             {/* Features Preview */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 text-sm text-secondary-600 max-w-lg mx-auto lg:mx-0"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 text-sm text-secondary-600 dark:text-secondary-400 max-w-lg mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -177,8 +177,8 @@ const Hero = () => {
                     priority
                   />
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-white font-medium text-sm sm:text-base px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+                  <div className="absolute inset-0 bg-black/30 dark:bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-white font-medium text-sm sm:text-base px-4 py-2 bg-white/20 dark:bg-black/30 backdrop-blur-sm rounded-lg border border-white/30 dark:border-white/20">
                       {t('hero.screenshot.click_to_enlarge', 'Screenshot vergrößern')}
                     </div>
                   </div>
