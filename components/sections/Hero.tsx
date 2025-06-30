@@ -10,7 +10,7 @@ import ImageLightbox from '@/components/ui/ImageLightbox'
 import { trackLightboxOpen } from '@/lib/analytics'
 
 const Hero = () => {
-  const { t } = useTranslations()
+  const { t, locale } = useTranslations()
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
   const scrollToFeatures = () => {
@@ -19,10 +19,13 @@ const Hero = () => {
 
   const openScreenshotLightbox = () => {
     setLightboxOpen(true)
-    
     // Analytics Event für Hero-Screenshot Lightbox
-    trackLightboxOpen('QuartaBill Hauptbildschirm', 'hero')
+    trackLightboxOpen(t('hero.screenshot.title', 'QuartaBill Hauptbildschirm'), 'hero')
   }
+
+  const screenshotSrc = locale === 'en' 
+    ? '/screenshots/en/QuartaBill-Screenshot-2025-06-27-1-en.png' 
+    : '/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png'
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -166,8 +169,8 @@ const Hero = () => {
               >
                 <div className="relative overflow-hidden rounded-lg sm:rounded-xl">
                   <Image
-                    src="/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png"
-                    alt="QuartaBill Hauptbildschirm"
+                    src={screenshotSrc}
+                    alt={t('hero.screenshot.alt', 'QuartaBill Hauptbildschirm')}
                     width={800}
                     height={600}
                     className="w-full h-auto shadow-xl sm:shadow-2xl transition-transform group-hover:scale-105"
@@ -223,7 +226,7 @@ const Hero = () => {
           onClick={scrollToFeatures}
           className="flex flex-col items-center text-secondary-400 hover:text-secondary-600 transition-colors"
         >
-          <span className="text-sm mb-2">Entdecken Sie mehr</span>
+          <span className="text-sm mb-2">{t('hero.scroll_indicator', 'Entdecken Sie mehr')}</span>
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -237,9 +240,9 @@ const Hero = () => {
       <ImageLightbox
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        imageSrc="/screenshots/de/QuartaBill-Screenshot-2025-06-27-1-de.png"
-        imageAlt="QuartaBill Hauptbildschirm"
-        title="QuartaBill Hauptbildschirm"
+        imageSrc={screenshotSrc}
+        imageAlt={t('hero.screenshot.alt', 'QuartaBill Hauptbildschirm')}
+        title={t('hero.screenshot.title', 'QuartaBill Hauptbildschirm')}
       />
     </section>
   )

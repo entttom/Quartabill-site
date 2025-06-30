@@ -17,8 +17,11 @@
     "cta_secondary": "View Screenshots",
     "cta_tertiary": "GitHub Repository",
     "screenshot": {
-      "click_to_enlarge": "Click to enlarge"
-    }
+      "click_to_enlarge": "Click to enlarge",
+      "title": "QuartaBill Main Screen",
+      "alt": "QuartaBill Main Screen"
+    },
+    "scroll_indicator": "Discover more"
   },
   "nav": {
     "features": "Features",
